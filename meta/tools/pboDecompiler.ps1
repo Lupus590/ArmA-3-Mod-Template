@@ -2,7 +2,7 @@ $overwriteExistingFolders = $false
 $removePbos = $false
 
 # Tool paths - change these as needed
-$pboConsolePath = "C:\Program Files\PBO Manager\pboc.exe" # https://github.com/winseros/pboman3/releases
+$pboConsolePath = "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" # https://www.moddb.com/mods/pbo-manager/downloads/pbo-manager-v14
 $cfgConvertPath = "C:\Games\Steam\steamapps\common\Arma 3 Tools\CfgConvert\CfgConvert.exe" # https://store.steampowered.com/app/233800/Arma_3_Tools/
 $cfgConvertFileChangePath = "C:\Games\Steam\steamapps\common\Arma 3 Tools\CfgConvertFilechng\CfgConvertFileChange.exe" # https://store.steampowered.com/app/233800/Arma_3_Tools/
 
