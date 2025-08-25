@@ -1,5 +1,4 @@
 # Getting Started
-
 Welcome! This guide will help you set up your environment for contributing to this project.
 
 ## Contributing Rules
