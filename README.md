@@ -22,6 +22,9 @@ You are encouraged to customize any part of the template to fit your project's n
 
 - [HEMTT](https://github.com/synixebrett/HEMTT) (recommended for building and packaging)
 - [ArmA 3 Tools](https://store.steampowered.com/app/233800/Arma_3_Tools/) (uploading the mod to the workshop, also used by HEMTT for advanced checking I believe)
+- [Visual Sudio Code]() (config editing)
+  - [Hemtt addon for VSCode](https://marketplace.visualstudio.com/items?itemName=BrettMayson.hemtt) (adds several nice to have features to VSCode which makes config editing easier and doubles as a PAA viewer)
+  - [EditorConfig for VSCode](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) (makes maintaining a code style partly automatic)
 
 ## License
 
