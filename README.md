@@ -11,12 +11,13 @@ You are encouraged to customize any part of the template to fit your project's n
 
 ## Getting Started
 
-1. Download this repository as a zip, please don't clone it I'd rarther not have loads of repos my commits in their history. (A gotcha with GitHub's template system, `logo.paa` is in git lfs and will fail to copy to your repo so you'll have to manually do copy it.)
-2. Choose a license for your project (see `LICENSE.md`).
-3. Update `.hemtt/presets/main.html` with your modlist.
-4. Edit `.hemtt/project.toml` with your project details.
-5. Review and adjust the documentation in `meta/doc/*` to fit your workflow.
-6. Update this README to reflect your project.
+1. Click on `Use this template` (green button top right)
+2. Run `any of the setup scripts`, you may need to install powershell
+3. Choose a license for your project (see `LICENSE.md`).
+4. Update `.hemtt/presets/main.html` with your modlist.
+5. Edit `.hemtt/project.toml` with your project details.
+6. Review and adjust the documentation in `meta/doc/*` to fit your workflow.
+7. Update this README to reflect your project.
 
 ## Requirements
 
@@ -30,4 +31,5 @@ You are encouraged to customize any part of the template to fit your project's n
 ## License
 
 This template is licensed under [CC0 1.0 Universal](LICENSE.md).
+
 
