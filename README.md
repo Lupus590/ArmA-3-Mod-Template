@@ -20,6 +20,7 @@ You are encouraged to customize any part of the template to fit your project's n
 
 ## Requirements
 
+- [PowerShell](https://github.com/PowerShell/PowerShell) (required for running the setup and build scripts on all platforms)
 - [HEMTT](https://github.com/synixebrett/HEMTT) (recommended for building and packaging)
 - [ArmA 3 Tools](https://store.steampowered.com/app/233800/Arma_3_Tools/) (uploading the mod to the workshop, also used by HEMTT for advanced checking I believe)
 - [Visual Sudio Code]() (config editing)
