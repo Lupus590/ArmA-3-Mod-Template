@@ -12,7 +12,7 @@ You are encouraged to customize any part of the template to fit your project's n
 ## Getting Started
 
 1. Click on `Use this template` (green button top right)
-2. Run `any of the setup scripts`, you may need to install powershell
+2. Run any of the `setup` scripts, you may need to install powershell
 3. Choose a license for your project (see `LICENSE.md`).
 4. Update `.hemtt/presets/main.html` with your modlist.
 5. Edit `.hemtt/project.toml` with your project details.
@@ -31,5 +31,6 @@ You are encouraged to customize any part of the template to fit your project's n
 ## License
 
 This template is licensed under [CC0 1.0 Universal](LICENSE.md).
+
 
 
