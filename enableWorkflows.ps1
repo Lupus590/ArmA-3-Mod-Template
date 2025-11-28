@@ -2,13 +2,18 @@
 
 $workflowsPath = ".github/workflows"
 
+# Workflows to exclude from enabling (work-in-progress or non-functional)
+$excludedWorkflows = @(
+	"make-release.yml.disabled"
+)
+
 if (-not (Test-Path $workflowsPath)) {
 	Write-Error "Workflows directory not found: $workflowsPath"
 	Read-Host -Prompt "Press Enter to continue"
 	exit 1
 }
 
-$disabledWorkflows = Get-ChildItem -Path $workflowsPath -Filter "*.yml.disabled"
+$disabledWorkflows = Get-ChildItem -Path $workflowsPath -Filter "*.yml.disabled" | Where-Object { $excludedWorkflows -notcontains $_.Name }
 
 if ($disabledWorkflows.Count -eq 0) {
 	Write-Output "No disabled workflows found to enable."
