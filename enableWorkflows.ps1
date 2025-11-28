@@ -18,6 +18,7 @@ if ($disabledWorkflows.Count -eq 0) {
 }
 
 $enabledCount = 0
+$failedCount = 0
 foreach ($workflow in $disabledWorkflows) {
 	$newName = $workflow.Name -replace "\.yml\.disabled$", ".yml"
 	$newPath = Join-Path $workflowsPath $newName
@@ -28,11 +29,15 @@ foreach ($workflow in $disabledWorkflows) {
 		$enabledCount++
 	} catch {
 		Write-Error "Failed to enable: $($workflow.Name)"
+		$failedCount++
 	}
 }
 
 Write-Output ""
 Write-Output "$enabledCount workflow(s) have been enabled."
+if ($failedCount -gt 0) {
+	Write-Output "$failedCount workflow(s) failed to enable."
+}
 Write-Output "Don't forget to commit the changes."
 Read-Host -Prompt "Press Enter to continue"
 exit 0
