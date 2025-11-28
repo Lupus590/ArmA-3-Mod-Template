@@ -22,12 +22,11 @@ foreach ($workflow in $disabledWorkflows) {
 	$newName = $workflow.Name -replace "\.yml\.disabled$", ".yml"
 	$newPath = Join-Path $workflowsPath $newName
 	
-	Rename-Item -Path $workflow.FullName -NewName $newName
-	
-	if ($?) {
+	try {
+		Rename-Item -Path $workflow.FullName -NewName $newName -ErrorAction Stop
 		Write-Output "Enabled: $newName"
 		$enabledCount++
-	} else {
+	} catch {
 		Write-Error "Failed to enable: $($workflow.Name)"
 	}
 }
