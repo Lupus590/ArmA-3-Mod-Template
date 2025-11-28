@@ -1,11 +1,7 @@
 # Script to re-enable GitHub workflows by renaming .yml.disabled back to .yml
+# Note: .yml.wip files are work-in-progress workflows and will not be enabled by this script
 
 $workflowsPath = ".github/workflows"
-
-# Workflows to exclude from enabling (work-in-progress or non-functional)
-$excludedWorkflows = @(
-	"make-release.yml.disabled"
-)
 
 if (-not (Test-Path $workflowsPath)) {
 	Write-Error "Workflows directory not found: $workflowsPath"
@@ -13,7 +9,7 @@ if (-not (Test-Path $workflowsPath)) {
 	exit 1
 }
 
-$disabledWorkflows = Get-ChildItem -Path $workflowsPath -Filter "*.yml.disabled" | Where-Object { $excludedWorkflows -notcontains $_.Name }
+$disabledWorkflows = Get-ChildItem -Path $workflowsPath -Filter "*.yml.disabled"
 
 if ($disabledWorkflows.Count -eq 0) {
 	Write-Output "No disabled workflows found to enable."
