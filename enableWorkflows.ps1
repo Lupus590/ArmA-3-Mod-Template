@@ -1,0 +1,38 @@
+# Script to re-enable GitHub workflows by renaming .yml.disabled back to .yml
+
+$workflowsPath = ".github/workflows"
+
+if (-not (Test-Path $workflowsPath)) {
+	Write-Error "Workflows directory not found: $workflowsPath"
+	Pause
+	exit 1
+}
+
+$disabledWorkflows = Get-ChildItem -Path $workflowsPath -Filter "*.yml.disabled"
+
+if ($disabledWorkflows.Count -eq 0) {
+	Write-Output "No disabled workflows found to enable."
+	Pause
+	exit 0
+}
+
+$enabledCount = 0
+foreach ($workflow in $disabledWorkflows) {
+	$newName = $workflow.Name -replace "\.yml\.disabled$", ".yml"
+	$newPath = Join-Path $workflowsPath $newName
+	
+	Rename-Item -Path $workflow.FullName -NewName $newName
+	
+	if ($?) {
+		Write-Output "Enabled: $newName"
+		$enabledCount++
+	} else {
+		Write-Error "Failed to enable: $($workflow.Name)"
+	}
+}
+
+Write-Output ""
+Write-Output "$enabledCount workflow(s) have been enabled."
+Write-Output "Don't forget to commit the changes."
+Pause
+exit 0
