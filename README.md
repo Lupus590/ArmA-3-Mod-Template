@@ -11,13 +11,14 @@ You are encouraged to customize any part of the template to fit your project's n
 
 ## Getting Started
 
-1. Click on `Use this template` (green button top right)
-2. Run any of the `setup` scripts, you may need to install powershell
-3. Choose a license for your project (see `LICENSE.md`).
-4. Update `.hemtt/presets/main.html` with your modlist.
-5. Edit `.hemtt/project.toml` with your project details.
-6. Review and adjust the documentation in `meta/doc/*` to fit your workflow.
-7. Update this README to reflect your project.
+1. Click on `Use this template` (green button top right).
+2. Run any of the `setup` scripts, you may need to install powershell.
+3. Once setup has successfully ran you can delete the `setup`, `convertToLFS`, and `enableWorkflows` script files as you will nolonger need them.
+4. Choose a license for your project (see `LICENSE.md`).
+5. Update `.hemtt/presets/main.html` with your modlist.
+6. Edit `.hemtt/project.toml` with your project details.
+7. Review and adjust the documentation in `meta/doc/*` to fit your workflow.
+8. Update this README to reflect your project.
 
 ## Requirements
 
@@ -31,6 +32,7 @@ You are encouraged to customize any part of the template to fit your project's n
 ## License
 
 This template is licensed under [CC0 1.0 Universal](LICENSE.md).
+
 
 
 
