@@ -17,8 +17,9 @@ You are encouraged to customize any part of the template to fit your project's n
 4. Choose a license for your project (see `LICENSE.md`).
 5. Update `.hemtt/presets/main.html` with your modlist.
 6. Edit `.hemtt/project.toml` with your project details.
-7. Review and adjust the documentation in `meta/doc/*` to fit your workflow.
-8. Update this README to reflect your project.
+7. Fix the prefix for the core addon.
+8. Review and adjust the documentation in `meta/doc/*` to fit your workflow.
+9. Update this README to reflect your project.
 
 ## Requirements
 
@@ -32,6 +33,7 @@ You are encouraged to customize any part of the template to fit your project's n
 ## License
 
 This template is licensed under [CC0 1.0 Universal](LICENSE.md).
+
 
 
 
