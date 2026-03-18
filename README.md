@@ -2,6 +2,8 @@
 
 This repository provides a template for creating and organizing an ArmA 3 mod project.
 
+This project is on [GitHub](https://github.com/Lupus590/ArmA-3-Mod-Template).
+
 ## About
 
 This template is designed to help you quickly start developing your own ArmA 3 mods by providing a well-organized project structure, example configuration files, and clear documentation.

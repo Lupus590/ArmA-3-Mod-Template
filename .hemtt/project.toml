@@ -12,6 +12,8 @@ include = [
 	"logo.paa",
 	"changelog.md",
 	"mod.cpp",
+	"README.md",
+	"LICENSE.md"
 ]
 
 [hemtt.release]
