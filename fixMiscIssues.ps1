@@ -1,7 +1,17 @@
 param (
-	[switch]$SkipPause = $false,
 	[switch]$SkipPrompt = $false
 )
+
+function Pause-If-FromExplorer {
+    try {
+        $ppid = (Get-CimInstance Win32_Process -Filter "ProcessId = $PID").ParentProcessId
+        $parent = Get-Process -Id $ppid -ErrorAction SilentlyContinue
+        if ($parent -and $parent.ProcessName -in @('explorer', 'Explorer')) {
+            Write-Host ''
+            Read-Host 'Press Enter to close this window'
+        }
+    } catch { }
+}
 
 if (-not $SkipPrompt)
 {
@@ -10,6 +20,7 @@ if (-not $SkipPrompt)
 	if ($response -ne "y" -or $response -ne "Y")
 	{
 		Write-Output "exiting without running fixes"
+		Pause-If-FromExplorer
 		exit
 	}
 }
@@ -33,7 +44,4 @@ git lfs fsck
 git lfs fetch --all
 git lfs pull
 
-if(-not $SkipPause)
-{
-	Pause
-}
+Pause-If-FromExplorer
